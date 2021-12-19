@@ -12,7 +12,7 @@ import classes from './HeaderCartButton.module.css';
 
 
 const HeaderCartButton = props => {
-    return <button className={classes.button}>
+    return <button className={classes.button} onClick={props.showModalHandler}>
         <span className={classes.icon}>
             <CartIcon />
         </span>
