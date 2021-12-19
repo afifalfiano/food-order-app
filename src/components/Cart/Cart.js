@@ -14,11 +14,11 @@ const Cart = props => {
     const hasItem = cartCtx.items.length > 0;
 
     const onRemoveHandler = (id) => {
-        console.log(id, 'cek');
+        cartCtx.removeItem(id);
     }
 
     const onAddHandler = (item) => {
-        console.log(item, 'cek a');
+        cartCtx.addItem({...item, amount: 1})
     }
 
     const cartItem = cartCtx.items.map(item => {
